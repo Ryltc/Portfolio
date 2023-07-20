@@ -26,22 +26,17 @@ body{
     background: #1a1a1a;
 }
 
-.ul{
-    display: inline;
-}
-
 .link-group{
     list-style: none;
     display: flex;
 }
 
 .link a{
-    display: flex;
-    color: #ffffff;
+    color: #fff;
     opacity: 0.5;
     text-decoration: none;
     text-transform: capitalize;
-    padding: 10px 3px;
+    padding: 10px 33px;
     margin: 0 20px;
     line-height: 80px;
     transition: .5s;
@@ -55,13 +50,17 @@ body{
 .home-section{
     width: 100%;
     height: 100vh;
-    padding: 150px;
+    padding: 0 150px;
     display: flex;
     align-items: center;
-    position: relative;
+    position: fixed;
     top: 0;
-    opacity: 0;
-    transition: 1s;
+}
+
+.home-section.active{
+    position: relative;
+    opacity: 1;
+    z-index: 8;
 }
 
 .hero-heading{
@@ -79,4 +78,30 @@ body{
     width: 50%;
     object-fit: cover;
     opacity: .2;
+}
+
+.project-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+}
+
+.project-heading{
+    font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: ;
 }
