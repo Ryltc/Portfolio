@@ -161,19 +161,20 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
-    margin-bottom: 20px;
 }
 
 .project-btn{
     height: 40px;
     text-transform: capitalize;
+    text-align: center;
+    align-items: center;
     font-size: 18px;
     border: none;
     background: #000;
     color: #fff;
     cursor: pointer;
-    margin-bottom: 20px;
 }
+
 
 .project-btn.live{
     background: none;
