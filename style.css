@@ -398,3 +398,9 @@ body{
     height: 100%;
     border-radius: 5px;
 }
+
+/* For screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    /* Adjust styles here */
+}
+
