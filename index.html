@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatable" content="IE=firefox">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function(){
+        emailjs.init("p6xsnmGkg4h066gFk"); // Replace with your EmailJS user ID
+    })();
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="emailjs-init.js"></script> <!-- Link to your JavaScript file -->
+
     <title>Personal Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
@@ -144,12 +153,44 @@
     <!--Contact-->
 
     <section class="contact-section">
-        <form class="contact-form">
+        <form class="contact-form" onsubmit="sendEmail(event);">
             <input type="text" name="name" id="name" autocomplete="off" placeholder="name">
             <input type="text" name="email" id="email" autocomplete="off" placeholder="email">
             <textarea name="msg" id="msg" placeholder="message" autocomplete="off"></textarea>
             <button type="submit" class="form-submit-btn">contact</button>
         </form>
+
+        <script>
+            function sendEmail(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get form values
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("msg").value;
+
+                // Send email using EmailJS
+                emailjs.send("service_vcaav07", "template_tg81pct", {
+                    to_name: name,
+                    from_name: email,
+                    message: message,
+                }).then(function(response) {
+                    console.log("Email sent:", response);
+                    alert("Thank you for contacting us!");
+                }, function(error) {
+                    console.error("Error sending email:", error);
+                    alert("Error sending email. Please try again later.");
+                });
+
+                // Clear form fields
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("msg").value = "";
+            }
+        </script>
+
+
+
 
         <!--Map-->
         <div class="map">
