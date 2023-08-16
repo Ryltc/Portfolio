@@ -125,7 +125,8 @@ body{
 }
 
 .project-img{
-    width: 100%;
+    max-width: 100%;
+    width: 550px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -403,4 +404,10 @@ body{
 @media (max-width: 768px) {
     /* Adjust styles here */
 }
+
+@media only screen and (max-width: 480px) {
+    img {
+      width: 100%;
+    }
+  }
 
