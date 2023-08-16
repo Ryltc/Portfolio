@@ -87,6 +87,7 @@ body{
     width: 50%;
     object-fit: cover;
     opacity: .2;
+    max-width: 100%;
 }
 
 /* project section */
@@ -127,13 +128,14 @@ body{
 .project-img{
     max-width: 100%;
     width: 550px;
-    height: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
     object-fit: cover;
     transition: .5s;
     opacity: .3;
+
 }
 
 .project-content{
@@ -278,6 +280,7 @@ body{
     display: block;
     margin: auto;
     height: 200px;
+    max-width: 100%;
 }
 
 .skill-name{
