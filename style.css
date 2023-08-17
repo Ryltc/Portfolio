@@ -223,6 +223,7 @@ body{
 
 .about-img{
     width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
@@ -403,14 +404,41 @@ body{
     border-radius: 5px;
 }
 
-/* For screens smaller than 768px (typical mobile devices) */
+/* For screens smaller than 768px */
 @media (max-width: 768px) {
-    /* Adjust styles here */
+    .navbar {
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .link-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust other styles as needed */
 }
 
-@media only screen and (max-width: 480px) {
-    img {
-      width: 100%;
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .home-section {
+        padding: 100px 20px;
     }
-  }
 
+    .hero-heading {
+        font-size: 40px;
+    }
+
+    .home-img {
+        width: 100%;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        margin-bottom: 40px;
+    }
