@@ -439,6 +439,36 @@ body{
         opacity: 1;
     }
 
+    .home-section{
+        width: 100%;
+        height: 100vh;
+        padding: 0 150px;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .hero-heading{
+        color: #fff;
+        font-size: 120px;
+        text-transform: capitalize;
+        font-weight: 300;
+    }
+
+    .home-img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 50%;
+        object-fit: cover;
+        opacity: .2;
+        max-width: 100%;
+    }
+
     .home-img,
     .project-img,
     .about-img,
@@ -576,8 +606,10 @@ body{
 /* For screens smaller than 480px */
 @media (max-width: 480px) {
 
-    body{
+    html, body{
         overflow-x: hidden;
+        width: 100%;
+
     }
 
     .navbar {
@@ -585,19 +617,24 @@ body{
         align-items: center;
         display: flex;
         position: inherit;
+        overflow-x: hidden;
     }
 
     .link-group {
+        width: 1005;
         display: flex;
         align-items: center;
+        overflow-x: hidden;
     }
 
     .home-section {
         padding: 100px 20px;
+        width: 100%;
     }
 
     .hero-heading {
         font-size: 40px;
+        width: 100%;
     }
 
     .home-img,
@@ -737,6 +774,247 @@ body{
 
     .skill-container{
         width: 95%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 100px;
+        color: #fff;
+    }
+
+    .skill-card{
+        position: relative;
+    }
+
+    .skill-name{
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 30px 0 20px;
+    }
+
+    .skill-info{
+        text-align: center;
+        opacity: 0.5;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .skill-level{
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        border-radius: 50%;
+        border: 10px solid black;
+    }
+
+    .skill-card:nth-child(1) .skill-level{
+        background: #ff4f4f28;
+        border-color: #ff4f4f;
+        color: #ff4f4f
+    }
+
+    .skill-card:nth-child(2) .skill-level{
+        background: #4fa0ff28;
+        border-color: #4fa0ff;
+        color: #4fa0ff;
+    }
+
+    .skill-card:nth-child(3) .skill-level{
+        background: #ffed4f28;
+        border-color: #ffed4f;
+        color: #ffed4f;
+    }
+
+    .skill-card:nth-child(4) .skill-level{
+        background: #52ff4f28;
+        border-color: #52ff4f;
+        color: #52ff4f;
+    }
+
+    .skill-card:nth-child(5) .skill-level{
+        background: #4fdfff28;
+        border-color: #4fdfff;
+        color: #4fdfff;
+    }
+
+    /* For screens smaller than 375px */
+    @media (max-width: 375px) {
+
+    html, body{
+        overflow-x: hidden;
+        width: 100%;
+
+    }
+
+    .navbar {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        position: inherit;
+        overflow-x: hidden;
+    }
+
+    .link-group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .home-section {
+        padding: 100px 20px;
+        width: 100%;
+    }
+
+    .hero-heading {
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .home-img,
+    .project-img,
+    .about-img,
+    .skill-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-section {
+        width: 100%;
+        padding: 80px 20px;
+        position: relative;
+        opacity: 1;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .project-heading {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .project-card {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .project-content{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .link-group {
+        align-items: center;
+    }
+
+    .link a{
+        color: #fff;
+        opacity: 0.5;
+        text-decoration: none;
+        text-transform: capitalize;
+        padding: 10px 32px;
+        margin: 0;
+        line-height: 40px;
+        transition: .5s;
+        font-size: 10px;
+        font-weight: 500;
+        justify-content: center;
+        align-items: center;
+    }
+    .link a:hover, .link.active a{
+        opacity: 1;
+    }
+
+    .about-section{
+        width: 100%;
+        min-height: 100vh;
+        padding: 80px 20px;
+        position: relative;
+        top: 0;
+        transition: 1s;
+    }
+
+    .about{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 40px;
+    }
+
+    .about-img-container{
+        position: relative;
+    }
+
+    .about-info{
+        color: #fff;
+        opacity: .6;
+        font-size: 20px;
+        line-height: 20px;
+        width: 300px;
+    }
+
+    .download-resume-btn{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: .5s;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .download-resume-btn:hover{
+        background: #000;
+    }
+
+    .skill-section{
+        position: relative;
+        margin: 100px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .heading{
+        text-align: center;
+        font-size: 60px;
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: 100px;
+        width: 100%;
+    }
+
+    .skill-container{
+        width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
