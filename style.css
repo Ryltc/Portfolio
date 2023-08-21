@@ -350,7 +350,6 @@ body{
 /* Contact */
 
 .contact-section{
-    position: absolute;
     top: 0;
     opacity: 0;
     transition: 1s;
@@ -600,11 +599,25 @@ body{
         border-color: #4fdfff;
         color: #4fdfff;
     }
+
+    .contact-section{
+        top: 0;
+        opacity: 0;
+        transition: 1s;
+        padding: 100px 150px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
     /* Adjust other styles as needed */
 }
 
 /* For screens smaller than 480px */
 @media (max-width: 480px) {
+    * {
+        box-sizing: border-box;
+      }
 
     html, body{
         overflow-x: hidden;
@@ -844,11 +857,21 @@ body{
         color: #4fdfff;
     }
 
+    .contact-section{
+        top: 0;
+        opacity: 0;
+        transition: 1s;
+        padding: 100px 150px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+
     /* For screens smaller than 375px */
     @media (max-width: 375px) {
 
     html, body{
-        overflow-x: hidden;
         width: 100%;
 
     }
@@ -1083,4 +1106,15 @@ body{
         background: #4fdfff28;
         border-color: #4fdfff;
         color: #4fdfff;
+    }
+
+    .contact-section{
+        top: 0;
+        opacity: 0;
+        transition: 1s;
+        padding: 100px 150px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
     }
