@@ -494,9 +494,11 @@ body{
         margin-bottom: 30px;
     }
 
-    .project-container {
+    .project-container .project-content {
         grid-template-columns: 1fr;
         align-items: center;
+        width: 100%;
+        padding: 20px;
     }
 
     .project-card {
