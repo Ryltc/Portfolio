@@ -408,7 +408,17 @@ body{
     height: 100%;
     border-radius: 5px;
 }
-
+/* For screens smaller than 1920x */
+@media (max-width: 1920px) {
+    html, body{
+        width: 100%;
+    }
+    
+    .navbar{
+        width: 100%;
+        align-items: center;
+    }
+}
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
     .navbar {
@@ -875,7 +885,6 @@ body{
 
     html, body{
         width: 100%;
-
     }
 
     .navbar {
