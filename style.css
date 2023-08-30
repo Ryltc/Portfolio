@@ -6,7 +6,7 @@
 
 body{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     display: block;
     margin: auto;
     min-height: 100vh;
@@ -16,7 +16,6 @@ body{
 
 .navbar{
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -99,7 +98,8 @@ body{
 .project-section{
     width: 100%;
     min-height: 100vh;
-    margin: 150px;
+    margin-top: 50px;
+    padding: 100px;
     position: fixed;
     top: 0;
     transition: 1s;
@@ -107,7 +107,21 @@ body{
 }
 
 .project-heading{
+    text-align: center;
     font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    padding-top: 150px 100px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.project-heading-sub{
+    text-align: center;
+    font-size: 40px;
     background: #252525;
     text-transform: capitalize;
     margin-bottom: 50px;
@@ -121,17 +135,19 @@ body{
 .project-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
+    grid-gap: 40px;
 }
 .project-card{
     height: 400px;
     position: relative;
+    max-width: 100%;
+    width: 500px;
 
 }
 
 .project-img{
     max-width: 100%;
-    width: 550px;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -148,13 +164,17 @@ body{
     color: #fff;
     transition: .5s;
     opacity: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 .project-title{
-    font-size: 50px;
+    font-size: 30px;
     text-transform: capitalize;
     text-align: center;
     font-weight: 300;
+    max-width: 100%;
+    width: 550px;
 }
 
 .project-info{
@@ -408,17 +428,108 @@ body{
     height: 100%;
     border-radius: 5px;
 }
-/* For screens smaller than 1920x */
+/* For screens smaller than 1920px */
 @media (max-width: 1920px) {
     html, body{
         width: 100%;
     }
-    
+
     .navbar{
         width: 100%;
         align-items: center;
     }
 }
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+    html, body{
+        width: 100%;
+    }
+
+    .navbar{
+        width: 100%;
+        align-items: center;
+    }
+
+    .project-section {
+        width: 100%;
+        padding: 80px 20px;
+        position: relative;
+        opacity: 1;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .project-heading {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .project-card {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .project-content{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .skill-container{
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px;
+        color: #fff;
+    }
+
+    .skill-card{
+        position: relative;
+    }
+
+    .skill-name{
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 30px 0 20px;
+    }
+
+    .skill-info{
+        text-align: center;
+        opacity: 0.5;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .skill-level{
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        border-radius: 50%;
+        border: 10px solid black;
+    }
+
+}
+
+
+
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
     .navbar {
@@ -622,7 +733,6 @@ body{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 50px;
     }
-    /* Adjust other styles as needed */
 }
 
 /* For screens smaller than 480px */
