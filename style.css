@@ -16,6 +16,7 @@ body{
 
 .navbar{
     width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -54,8 +55,7 @@ body{
 
 .home-section.active,
 .project-section.active,
-.about-section.active,
-.contact-section.active{
+.about-section.active {
     position: relative;
     opacity: 1;
     z-index: 8;
@@ -64,7 +64,7 @@ body{
 .home-section{
     width: 100%;
     height: 100vh;
-    padding: 0 150px;
+    padding: 0 100px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -191,7 +191,25 @@ body{
     grid-gap: 20px;
 }
 
+.project-btn-grp1{
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    grid-gap: 20px;
+}
+
 .project-btn{
+    line-height: 60px;
+    text-transform: capitalize;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-btn-1{
     line-height: 60px;
     text-transform: capitalize;
     text-align: center;
@@ -370,18 +388,22 @@ body{
 
 /* Contact */
 
-.contact-section{
+footer{
     top: 0;
     opacity: 0;
     transition: 1s;
     padding: 100px 150px;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     grid-gap: 50px;
+    opacity: 1;
+    z-index: 8;
 }
 
 .contact-form input, .contact-form textarea{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
     width: 100%;
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
@@ -413,6 +435,7 @@ body{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    top: 20px;
 }
 
 .map{
@@ -999,6 +1022,10 @@ body{
         grid-gap: 50px;
     }
 
+    .contact-form #msg{
+        width: 100%;
+    }
+
     /* For screens smaller than 375px */
     @media (max-width: 375px) {
 
@@ -1247,4 +1274,8 @@ body{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 50px;
+    }
+
+    .map {
+        display: none;
     }
